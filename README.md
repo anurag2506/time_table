@@ -2,9 +2,12 @@
 The project displays a web-page that shows the time -table for the students of b-tech 2 year according to their branch
 <h3>LANGUAGES USED:</h3><BR>
 <P>
+  <strong>
   1.HTML<br>
   2.CSS<br>
   3.JAVASCRIPT
+  </strong>
 </P>
 <h3>PROCESS:</h3>
-<p>The given excel file had data for classes of both second and third year</p><br>
+<p>The given excel file had data for classes of both second and third year <br>
+
