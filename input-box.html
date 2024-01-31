@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TABLE FOR B-TECH 2ND YEAR STIUDENTS BRANCH-WISE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box">
+    <select id="mySelect">
+        <option value="default">SELECT ANY OPTION</option>
+        <option value="CSE">Computer Science</option>
+        <option value="ME">Mechanical Engineering</option>
+        <option value="EE">Electrical Engineering</option>
+        <option value="CE">Civil Engineering</option>
+        <option value="MEMS">Metallurgy</option>
+    </select>
+</div>
+        <p id="i1">
+            
+        </p>
+        <p id="i2">
+            
+        </p>
+        <p id="i3">
+            
+        </p>
+        <p id="i4">
+            
+        </p>
+        <p id="i5">
+            
+        </p>
+        <p id="i6">
+            
+        </p>
+        <p id="i7">
+            
+        </p>
+        <p id="i8">
+            
+        </p>
+        <p id="i9">
+            
+        </p>
+ 
+    <script>
+        var tt_cs = [
+  ['NO Class', '09:30-10:25 L: CS 204', '10:30-11:25 L: CS 202', '11:30-12:25 L: CS 208', 'NO Class', '14:30-17:25 L: CS 254', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', 'NO Class', '10:30-11:25 L: CS 206', '11:30-12:25 L: CS 204', 'NO Class', '14:30-17:25 L:MA 204 CS', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: CS 206', '10:30-11:25 L: CS 204', '11:30-12:25 L: PUBLIC LECTURE', 'NO Class', '14:30-17:25 L: CS 254', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', 'NO Class', '10:30-11:25 L: CS 206', '11:30-12:25 L: CS 208', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['08:30-09:30 L:CS 334/434/634', '09:30-10:25 L: CS 204', '10:30-11:25 L: CS 208', '11:30-12:25 L: CS 202', 'NO Class', '14:30-17:25 L: CS 258', 'NO Class', 'NO Class', 'NO Class', 'NO Class']
+];
+
+var tt_ee = [
+  ['NO Class', '09:30-10:25 L: EE 206', '10:30-11:25 L: EE 202', '11:30-12:25L: EE 208', 'NO Class', 'NO Class', '14:30-18:25 P: EE 256 (E2) (4 hr) P: EE 258 (E1) (3 hr.)', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', 'NO Class', '10:30-11:25 L: EE 204', '11:30-12:25	L: EE 206', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: EE 204', '10:30-11:25 L: EE 202', '11:30-12:25 Public_lecture', 'NO Class', '14:30-18:25 P: EE 254 (E2) (3 hr) P: EE 256 (E1) (4 hr)', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: EE 202', '10:30-11:25 T: EE 204', '11:30-12:25 L: EE 208', 'NO Class', 'NO Class', '14:30-16:25 P : MA 204EE P: MA 204ME', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 T: EE 206', '10:30-11:25 T: EE 208', '11:30-12:25 T: EE 202', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class']
+];
+
+var tt_me = [
+  ['NO Class', '09:30-10:25 L: ME 208', '10:30-11:25 L: ME 206', '11:30-12:25 L: ME 202 13:30-14:25 L: HS 213', '14:30-17:25 P: ME 254 (M2) P: ME 258 (M1)', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: ME 202', ' 10:30-11:25 L: ME 204', '11:30-12:25 L: ME 208', 'NO Class', '14:30-17:25 P: ME 258 (M3)', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: ME 204', ' 10:30-11:25 L: ME 206', '11:30-12:25 Public_lecture', '13:30-14:25 L: HS 213', '14:30-17:25 P: ME 254 (M1)', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: ME 206', ' 10:30-11:25 T: ME 204', '11:30-12:25' ,'L: ME 202', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 T: ME 208', ' 10:30-11:25 T: ME 202', '11:30-12:25 T: ME 206', ' 13:30-14:25 T: HS 213', 'P: ME 258 (M2)', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class']
+];
+
+var tt_ce = [
+  ['NO Class', '09:30-10:25 L: CE 202', '10:30-11:25L: CE 206', ' 11:30-12:25 L: AA 204', 'NO Class', '14:30-17:25 P : MA 204CE P : MA 204MM', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: CE 208', '10:30-11:25 L: CE 204' ,'11:30-12:25 L: CE 202', 'NO Class', '14:30-17:30 P: CE 254 (CE1) (2 hr.) P: CE 256 (CE2) (3 hr.)', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: CE 204', '10:30-11:25 L: CE 206',' 11:30-12:25 PublicLecture', '13:30-14:25L: AA 204', '14:30-18:30 P: CE 254 (CE2) (2 hr.) P: CE 256 (CE1) (3 hr.)', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', 'NO Class', '10:30-11:25 T: CE 204', '11:30-12:25 L: CE 208', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 T: CE 202', '10:30-11:25 T: CE 208', '11:30-12:25: CE 206', '13:30-14:25 T: AA 204', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class']
+];
+
+var tt_mems = [
+  ['NO Class', '09:30-10:25 L: MM 202', '10:30-11:25L: MM 208', '11:30-12:25 L: MM 204', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: MM 206', '10:30-11:25 L: MM 202', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 L: MM 206', '10:30-11:25 L: MM 208', '11:30-12:25 PublicLecture', 'NO Class', '14:30-17:25 P: CE 310 (CE1) P: CE 354 (CE2)', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', 'NO Class', '10:30-11:25 T: MM 206', '11:30-12:25  L: MM 204', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class', 'NO Class'],
+  ['NO Class', '09:30-10:25 T: MM 202', '10:30-11:25 T: MM 204', '11:30-12:25 T: MM 208', 'NO Class', '14:30-17:25 P: CE 352 (CE2) P: CE 358 (CE1)', 'NO Class', 'NO Class', 'NO Class', 'NO Class']
+];
+
+        table_list = ["i1","i2","i3","i4","i5","i6","i7","i8","i9"]
+        var selectBox = document.getElementById("mySelect");
+        var selectedValue = selectBox.value;
+       var currentdate= new Date();
+       var day=currentdate.getDay();
+       var hour=currentdate.getHours();
+       
+        selectBox.addEventListener('change',function(){
+            
+        if(day==0||day==6||(day==5&&hour>=18)||(day==1&&hour<=18)){
+            if(selectBox.value=="CSE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_cs[0][i];
+        }
+        }
+        else if(selectBox.value=="EE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ee[0][i];
+        }
+        }
+        else if(selectBox.value=="ME")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_me[0][i];
+        }    
+        }
+        else if(selectBox.value=="CE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ce[0][i];
+        }
+        }
+        else if(selectBox.value=="MEMS")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_mems[0][i];
+        }
+        }
+    
+            
+        }
+        else if((day==1&&hour>=18)||(day==2&&hour<=18))
+        {  if(selectBox.value=="CSE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_cs[1][i];
+        }
+        }
+        else if(selectBox.value=="EE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ee[1][i];
+        }
+        }
+        else if(selectBox.value=="ME")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_me[1][i];
+        }    
+        }
+        else if(selectBox.value=="CE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ce[1][i];
+        }
+        }
+        else if(selectBox.value=="MEMS")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_mems[1][i];
+        }
+        }
+        }
+        else if((day==2&&hour>=18)||(day==3&&hour<=18))
+        {   if(selectBox.value=="CSE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_cs[2][i];
+        }
+        }
+        else if(selectBox.value=="EE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ee[2][i];
+        }
+        }
+        else if(selectBox.value=="ME")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_me[2][i];
+        }    
+        }
+        else if(selectBox.value=="CE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ce[2][i];
+        }
+        }
+        else if(selectBox.value=="MEMS")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_mems[2][i];
+        }
+        }
+        }
+        else if((day==3&&hour>=18)||(day==4&&hour<=18))
+        {   if(selectBox.value=="CSE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_cs[3][i];
+        }
+        }
+        else if(selectBox.value=="EE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ee[3][i];
+        }
+        }
+        else if(selectBox.value=="ME")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_me[3][i];
+        }    
+        }
+        else if(selectBox.value=="CE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ce[3][i];
+        }
+        }
+        else if(selectBox.value=="MEMS")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_mems[3][i];
+        }
+        }
+        }
+        else if((day==4&&hour>=18)||(day==5&&hour<=18))
+        {  if(selectBox.value=="CSE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_cs[4][i];
+        }
+        }
+        else if(selectBox.value=="EE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ee[4][i];
+        }
+        }
+        else if(selectBox.value=="ME")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_me[4][i];
+        }    
+        }
+        else if(selectBox.value=="CE")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_ce[4][i];
+        }
+        }
+        else if(selectBox.value=="MEMS")
+        {
+            for (let i=0; i<10; i++){
+            document.getElementById(table_list[i]).innerText = tt_mems[4][i];
+        }
+        }
+        }
+            
+        });
+        
+       
+      
+    </script>
+</body>
+</html>
