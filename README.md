@@ -11,7 +11,9 @@ The project displays a web-page that shows the time -table for the students of b
 <h3>PROCESS:</h3>
 <p>The given excel file had data for classes of both second and third year <br>
 But the given task had mentioned to display the time-table for only second-year students <br>
-So I have accessed data only for 2nd year students 
+So I have accessed data only for 2nd year students <br>
+By creating array of arrays(or list of lists), I was able to enter data for each branch on a given single day<br>
+And I have inputted the current date and time of the system and depending on whether its before or after 6:00pm I have mentioned the classes accordingly
 </p>
 
 
