@@ -15,5 +15,8 @@ So I have accessed data only for 2nd year students <br>
 By creating array of arrays(or list of lists), I was able to enter data for each branch on a given single day<br>
 And I have inputted the current date and time of the system and depending on whether its before or after 6:00pm I have mentioned the classes accordingly
 </p>
+<h3>INSTRUCTIONS TO RUN THE PROJECT</h3>
+<p>You must click on the GO-Live portal on the botom-right corner of the vscode page in order for the web-page to open on the browser</p>
+
 
 
